@@ -93,7 +93,7 @@ done
 [ -n "${ZSH_VERSION}" ] && unsetopt shwordsplit
 
 # fetch the contents of the CA cert
-export BOSH_CA_CERT="$(omc -f json certificate-authorities | \
+export BOSH_CA_CERT="$(omc certificate-authorities -f json | \
     jq -r '.[] | select(.active==true) | .cert_pem')"
 
 export BOSH_ALL_PROXY="ssh+socks5://ubuntu@$OM_HOST:22?private-key=$OM_KEY"
