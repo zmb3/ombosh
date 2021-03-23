@@ -1,11 +1,15 @@
 # ombosh.sh
 
+**Deprecation Notice:** This functionality has integrated into the
+[`om bosh-env`](https://github.com/pivotal-cf/om/blob/main/docs/bosh-env/README.md)
+command.
+
 Use the BOSH CLI against the Operations Manager director
 
 This script requires the [`om`](https://github.com/pivotal-cf/om) CLI.
 
-It assumes that the CLI named `om` and placed on your `$PATH`.
-You can override the name of the CLI with the `-c` option.
+It assumes that the CLI named `om` and placed on your `$PATH`. You can override
+the name of the CLI with the `-c` option.
 
 For example: `./ombosh -c om-linux ...`
 
